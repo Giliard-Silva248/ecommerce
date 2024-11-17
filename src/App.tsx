@@ -1,11 +1,16 @@
 import React from 'react';
+import { NavBar } from './components/NavBar/NavBar';
+import { Home } from './components/Home/Home';
+import { Provider } from 'react-redux';
+import { store } from './redux/store/store';
 
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline bg-cor1 h-dvh">
-      Hello world!
-    </h1>
+    <Provider store={store}>
+      <NavBar/>
+      <Home/>
+    </Provider>
   );
 }
 
