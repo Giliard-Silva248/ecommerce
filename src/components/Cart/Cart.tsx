@@ -21,7 +21,7 @@ export function Cart() {
 
 
     return (
-        <S.carrinho $toggle={toggle} className="">
+        <S.carrinho $toggle={toggle}>
 
             {!toggle ?
             <div>

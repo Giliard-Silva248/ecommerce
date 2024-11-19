@@ -6,10 +6,9 @@ export const carrinho = styled.aside<{ $toggle: boolean }>`
     right: ${({$toggle}) => ($toggle ? '0' : '')};
     border: ${({$toggle}) => ($toggle ? '1px solid red' : 'none')};
     height: ${({$toggle}) => ($toggle ? '100vh' : '')};
-    width: ${({$toggle}) => ($toggle ? '15rem' : 'none')};
+    width: ${({$toggle}) => ($toggle ? '15rem' : '-15rem')};
 
-    transform: ${({ $toggle }) => ($toggle ? 'translateY(0%)' : 'translateY(-10%)')};
-    transition: transform 0.9s ease;
+
 /* h-dvh fixed top-0 end-0 border-4 border-red-800 */
 
 `
