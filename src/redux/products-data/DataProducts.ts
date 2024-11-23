@@ -1,22 +1,31 @@
 import { Dispatch } from "@reduxjs/toolkit";
 import axios from "axios";
+import { Product } from "../reducer";
+
 
 export const PRODUCTS_LIST = 'PRODUCTS_LIST';
 export const ADD_TO_CART = 'ADD_TO_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const REMOVE_ALL_FROM_CART = 'REMOVE_ALL_FROM_CART';
+
 
 export const productsList = (products: any) => ({
     type: PRODUCTS_LIST,
     payload: products
 });
 
-export const addToCart = (product: any) => ({
+export const addToCart = (product: Product) => ({
     type: ADD_TO_CART,
     payload: product
 });
 
 export const removeFromCart = (productId: number) => ({
     type: REMOVE_FROM_CART,
+    payload: productId
+});
+
+export const removeAllFromCart = (productId: number) => ({
+    type: REMOVE_ALL_FROM_CART,
     payload: productId
 });
 
