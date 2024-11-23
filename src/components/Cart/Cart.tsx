@@ -21,27 +21,43 @@ export function Cart() {
 
 
     return (
-        <S.carrinho $toggle={toggle}>
+        <S.Carrinho $toggle={toggle}  className="bg-cor4 py-4 px-1 space-y-4">
 
             {!toggle ?
-            <div>
-                <button onClick={() => setToggle(!toggle)}><FaCartShopping /></button> 
+            <div  className=" absolute top-btnCard right-4">
+                <button onClick={() => setToggle(!toggle)} className="bg-cor4 p-4 rounded-full"><FaCartShopping /></button> 
             </div>
             :
             <>
-                <button onClick={() => setToggle(!toggle)}><IoCloseSharp /></button> 
-                <h1>Carrinho</h1>
-                <ul>
+                <button onClick={() => setToggle(!toggle)} className="hover:text-red-600"><IoCloseSharp /></button> 
+                
+                <ul className="space-y-1">
                     {cart.map(product => (
-                        <li key={product.id}>
-                            <h3>{product.title}</h3>
-                            <button onClick={() => handleRemoveFromCart(product.id)}><MdRemoveShoppingCart /></button>
-                        </li>
+                         <li className="flex items-center gap-4 border bg-cor3 p-2">
+                         <img
+                          src={product.thumbnail} alt={product.title}
+                           className="size-16 rounded object-cover border border-cor1 roader"
+                         />
+                 
+                         <div>
+                           <h3 className="text-sm text-gray-900">{product.title}</h3>
+                 
+                           <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
+                             <div>
+                               <dt className="inline">{product.brand}</dt>
+                             </div>
+                           </dl>
+                         </div>
+                 
+                         <div className="flex flex-1 items-center justify-end gap-2">
+                         <button onClick={() => handleRemoveFromCart(product.id)} className="text-gray-600 transition hover:text-red-600"><MdRemoveShoppingCart /></button>
+                         </div>
+                       </li>
                     ))}
                 </ul>
             </>
             }
             
-        </S.carrinho>
+        </S.Carrinho>
     );
 }

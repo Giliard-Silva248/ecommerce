@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavBar } from './components/NavBar/NavBar';
 import { Home } from './components/Home/Home';
 import { Provider } from 'react-redux';
@@ -9,10 +8,12 @@ import { Login } from './components/Login/Login';
 import { Register } from './components/Register/Register';
 
 
+
 function App() {
   return (
     <Provider store={store}>
       <NavBar/>
+
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>

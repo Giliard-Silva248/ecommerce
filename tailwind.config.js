@@ -9,6 +9,9 @@ module.exports = {
         cor3: '#F0F0F0',
         cor4: '#FF6F61',
         cor5: '#98FF98',
+      },
+      spacing: {
+        'btnCard': '44rem',
       }
     },
   },

@@ -19,7 +19,7 @@ export interface Product {
         reviewerEmail: string;
     }[];
     returnPolicy: string;
-    images: string[];
+    images: string;
     thumbnail: string;
 }
 
