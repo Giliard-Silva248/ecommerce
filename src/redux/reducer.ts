@@ -1,5 +1,5 @@
 import { PayloadAction } from '@reduxjs/toolkit';
-import { PRODUCTS_LIST, ADD_TO_CART, REMOVE_FROM_CART, REMOVE_ALL_FROM_CART } from './products-data/DataProducts';
+import { PRODUCTS_LIST, ADD_TO_CART, REMOVE_FROM_CART, REMOVE_ALL_FROM_CART, LIMIT } from './products-data/DataProducts';
 
 export interface Product {
     id: number;

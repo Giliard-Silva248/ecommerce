@@ -35,7 +35,7 @@ export function Cart() {
         return totalCart + product.price * product.quantity;
     }, 0);
     return (
-        <S.Carrinho $toggle={toggle} className={`${toggle ? 'bg-cor4' : 'bg-transparent'} py-4 px-1 space-y-4 z-20 overflow-auto`}>
+        <S.Carrinho $toggle={toggle} className={`${toggle ? 'bg-cor4 scrollbar scrollbar-thumb  scrollbar-thumb-hover scrollbar-bg scrollbar-firefox h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[40rem] overflow-y-scroll ' : 'bg-transparent'} py-4 px-1 space-y-4 z-20`}>
             {!toggle ? (
                 <div className="rounded-full">
                     <button onClick={() => setToggle(!toggle)} className="bg-cor4 p-4 rounded-full">

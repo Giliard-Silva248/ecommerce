@@ -1,17 +1,26 @@
-import {  useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CardsProducts } from "../CardsProducts/CardsProducts";
-import { RootState } from "../../redux/store/store";
+import { AppDispatch, RootState } from "../../redux/store/store";
 import { Product } from "../../redux/reducer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { fetchProducts, more } from "../../redux/products-data/DataProducts";
 
 export function ContainerProducts() {
- 
+  const dispatch = useDispatch<AppDispatch>();
   const products = useSelector((state: RootState) => state.products?.products || []) as Product[];
+
+  useEffect(() => {
+      dispatch(fetchProducts());
+  }, [dispatch]);
 
   const [sortOption, setSortOption] = useState<string>("");
 
   const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSortOption(event.target.value);
+  };
+
+  const handleMore = () => {
+    dispatch(more());
   };
 
   const sortedProducts = [...products].sort((a, b) => {
@@ -56,6 +65,9 @@ export function ContainerProducts() {
           </div>
         </div>
         <CardsProducts products={sortedProducts} />
+        <div className="flex flex-col items-center">
+          <button onClick={handleMore} className="block w-64 rounded bg-gray-900 my-5 px-4 py-2 text-sm font-medium text-white transition hover:scale-105">More Products</button>
+        </div>
       </div>
     </section>
   );

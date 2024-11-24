@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchProducts, addToCart } from "../../redux/products-data/DataProducts";
 import { AppDispatch } from "../../redux/store/store";
@@ -11,6 +11,7 @@ interface CardsProductsProps {
 export function CardsProducts({ products }: CardsProductsProps) {
     const dispatch = useDispatch<AppDispatch>();
 
+
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
@@ -18,6 +19,9 @@ export function CardsProducts({ products }: CardsProductsProps) {
     const handleAddToCart = (product: Product) => {
         dispatch(addToCart(product));
     };
+
+    
+
 
     return (
         <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
