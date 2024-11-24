@@ -31,11 +31,9 @@ export function Cart() {
         dispatch(removeAllFromCart(productId));
     };
 
-    // Cálculo do total ajustado com tipagem
     const total = cart.reduce((totalCart:any, product:any) => {
         return totalCart + product.price * product.quantity;
     }, 0);
-    console.log('Total:', total);
     return (
         <S.Carrinho $toggle={toggle} className={`${toggle ? 'bg-cor4' : 'bg-transparent'} py-4 px-1 space-y-4 z-20 overflow-auto`}>
             {!toggle ? (
