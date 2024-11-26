@@ -1,9 +1,23 @@
 import { useState } from 'react';
 import { IoCloseSharp } from "react-icons/io5";
+import Home from '../../Pages/Home/Home';
+import Login from '../../Pages/Login/Login';
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [cmp , setCmp] = useState('components1')
 
+    const componentsRender = ()=>{
+
+        switch(cmp){
+            case 'components1':
+                return <Home/>
+            case 'components2':
+                return <Login/>
+            default:
+                return <Home/>;
+        }
+    }
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
        
@@ -11,6 +25,7 @@ export default function NavBar() {
 
 
     return (
+        <>
         <section className="px-4 w-full h-20 flex justify-between items-center shadow bg-cor3 text-cor5">
             <a href="/ " className="w-full md:w-auto hover:opacity-70 transition-all ease-in-out duration-300">MyShop.com</a>
 
@@ -39,8 +54,8 @@ export default function NavBar() {
                     <nav aria-label="Breadcrumb" className="flex">
                     <ol className="flex overflow-hidden rounded-lg border border-gray-200 text-gray-600">
                         <li className="flex items-center">
-                        <a
-                            href="/"
+                        <button
+                             onClick={() => setCmp('components1')}
                             className="flex h-10 items-center gap-1.5 bg-gray-100 px-4 transition hover:text-gray-900"
                         >
                             <svg
@@ -59,7 +74,7 @@ export default function NavBar() {
                             </svg>
 
                             <span className="ms-1.5 text-xs font-medium"> Home </span>
-                        </a>
+                        </button>
                         </li>
 
                         <li className="relative flex items-center">
@@ -68,12 +83,12 @@ export default function NavBar() {
                         >
                         </span>
 
-                        <a
-                            href="/login"
+                        <button
+                            onClick={() => setCmp('components2')}
                             className="flex h-10 items-center bg-white pe-4 ps-8 text-xs font-medium transition hover:text-gray-900"
                         >
                             Login
-                        </a>
+                        </button>
                         </li>
                     </ol>
                     </nav>
@@ -82,5 +97,8 @@ export default function NavBar() {
        
             
         </section>
+
+        {componentsRender()}
+        </>
     );
 }
