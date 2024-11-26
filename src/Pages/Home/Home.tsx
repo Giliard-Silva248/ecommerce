@@ -1,5 +1,5 @@
-import { Cart } from "../Cart/Cart";
-import { ContainerProducts } from "../ContainerProducts/ContainerProducts";
+import { Cart } from "../../components/Cart/Cart";
+import { ContainerProducts } from "../../components/ContainerProducts/ContainerProducts";
 
 export function Home() {
     return (

@@ -8,7 +8,7 @@ interface Image {
   
   // Componente de Imagem em React
   declare module '*.jpg' {
-    const content: Image;
+    const content: any;
     export default content;
   }
   

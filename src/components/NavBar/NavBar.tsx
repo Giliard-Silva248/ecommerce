@@ -24,7 +24,7 @@ export function NavBar() {
                 </div>
         
 
-                <nav className={`${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0 fixed top-0 right-0 w-64 h-full z-10 bg-cor3 transition-transform transform fixed md:static flex flex-col justify-start md:flex-row md:w-auto gap-6  items-center  px-1 `}>
+                <nav className={`${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0 fixed top-0 right-0 w-64 h-full z-50 bg-cor3 transition-transform transform fixed md:static flex flex-col justify-start md:flex-row md:w-auto gap-6  items-center  px-1 `}>
                     {
                         isMenuOpen ?
                         <div className="md:hidden  w-full px-4 my-4 text-end">
@@ -33,7 +33,7 @@ export function NavBar() {
                         </button>
                         </div>
                         :
-                        <></>
+                        <div className="md:hidden my-8 "></div>
                     }
 
                     <nav aria-label="Breadcrumb" className="flex">

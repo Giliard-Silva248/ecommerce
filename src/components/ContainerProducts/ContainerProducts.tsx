@@ -55,7 +55,7 @@ export function ContainerProducts() {
     
           <div className="hidden sm:block">
             <label htmlFor="SortBy" className="sr-only">SortBy</label>
-            <select id="SortBy" className="h-10 rounded border-gray-300 text-sm" onChange={handleSortChange}>
+            <select id="SortBy" className="h-10 rounded border-gray-300 text-sm bg-cor2" onChange={handleSortChange}>
               <option value="">Sort By</option>
               <option value="Title, DESC">Title, DESC</option>
               <option value="Title, ASC">Title, ASC</option>

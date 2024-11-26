@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}",  './node_modules/flyonui/dist/js/*.js'],
   theme: {
     extend: {
       colors: {
@@ -9,19 +9,18 @@ module.exports = {
         cor3: '#521945',
         cor4: '#912F56',
         cor5: '#EAF2EF',
-        'scrollbar-bg': '#521945',
-        'scrollbar-thumb': '#521945',
-        'scrollbar-thumb-hover': '#521945',
       },
       backgroundImage: {
-        'banner': "url('/src/assets/img/banner.jpg')"
-      },
-      borderRadius: {
-        'scrollbar': '6px',
+        'banner': "url('/src/assets/img/banner.jpg')",
+        'loginBg': "url('/src/assets/img/loginImg.jpg')",
+        'cadastroBg': "url('/src/assets/img/cadastroImg.jpg')",
+
       },
     },
   },
   plugins: [
+    require('flyonui'),
+    require('flyonui/plugin'),
     function({ addUtilities }) {
       addUtilities({
         '.scrollbar': {
