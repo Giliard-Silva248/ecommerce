@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IoCloseSharp } from "react-icons/io5";
 
-export function NavBar() {
+export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {

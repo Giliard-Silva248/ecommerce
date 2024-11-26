@@ -2,7 +2,7 @@ import { useState } from 'react';
 import loginImg from '../../assets/img/loginImg.jpg';
 import cadastroImg from '../../assets/img/cadastroImg.jpg';
 
-export function Login() {
+export default function Login() {
   const [toggle, setToggle] = useState(false);
 
   return (
