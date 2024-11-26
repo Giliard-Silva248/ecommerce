@@ -12,8 +12,8 @@ function App() {
       
           <NavBar />
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/src/Pages/Home/Home.tsx' element={<Home />} />
+            <Route path='/src/Pages/Login/Login.tsx' element={<Login />} />
           </Routes>
      
         </section>
