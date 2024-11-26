@@ -12,7 +12,7 @@ export default function NavBar() {
 
     return (
         <section className="px-4 w-full h-20 flex justify-between items-center shadow bg-cor3 text-cor5">
-            <a href="/src/Pages/Home/Home.tsx" className="w-full md:w-auto hover:opacity-70 transition-all ease-in-out duration-300">MyShop.com</a>
+            <a href="/" className="w-full md:w-auto hover:opacity-70 transition-all ease-in-out duration-300">MyShop.com</a>
 
            
                 <div className="md:hidden ">
@@ -40,7 +40,7 @@ export default function NavBar() {
                     <ol className="flex overflow-hidden rounded-lg border border-gray-200 text-gray-600">
                         <li className="flex items-center">
                         <a
-                            href="/src/Pages/Home/Home.tsx"
+                            href="/"
                             className="flex h-10 items-center gap-1.5 bg-gray-100 px-4 transition hover:text-gray-900"
                         >
                             <svg
@@ -69,7 +69,7 @@ export default function NavBar() {
                         </span>
 
                         <a
-                            href="/src/Pages/Login/Login.tsx"
+                            href="/login"
                             className="flex h-10 items-center bg-white pe-4 ps-8 text-xs font-medium transition hover:text-gray-900"
                         >
                             Login
