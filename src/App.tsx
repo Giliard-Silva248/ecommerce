@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import { store } from './redux/store/store';
 import Home from './Pages/Home/Home';
