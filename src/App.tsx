@@ -12,12 +12,15 @@ import { Login } from './Pages/Login/Login';
 function App() {
   return (
     <Provider store={store}>
+      <section className='bg-cor5'>
+
       <NavBar/>
 
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
       </Routes>
+      </section>
     </Provider>
   );
 }

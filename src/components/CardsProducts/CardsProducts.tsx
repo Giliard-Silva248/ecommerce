@@ -33,7 +33,7 @@ export function CardsProducts({ products }: CardsProductsProps) {
                 </div>
             )}
             {!isLoading && (
-                <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-cor5">
                     {products.map((product: Product) => (
                         <li key={product.id} className="border shadow w-full">
                             <div className="group block overflow-hidden space-y-6">
