@@ -1,0 +1,13 @@
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[redirects]
+  # Redireciona /old-path para /new-path com status 301 (permanente)
+  - from: "/"
+    to: "/"
+    status: 301
+
+[functions]
+  directory = "functions"
