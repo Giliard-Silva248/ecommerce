@@ -27,7 +27,7 @@ export default function NavBar() {
     return (
         <>
         <section className="px-4 w-full h-20 flex justify-between items-center shadow bg-cor3 text-cor5">
-            <a href="/ " className="w-full md:w-auto hover:opacity-70 transition-all ease-in-out duration-300">MyShop.com</a>
+            <button onClick={() => setCmp('components1')} className="w-full md:w-auto hover:opacity-70 transition-all ease-in-out duration-300">MyShop.com</button>
 
            
                 <div className="md:hidden ">
