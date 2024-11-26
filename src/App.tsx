@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import { store } from './redux/store/store';
 import Home from './Pages/Home/Home';
@@ -9,13 +9,13 @@ function App() {
   return (
     <Provider store={store}>
         <section className='bg-cor5'>
-      <Router>
+      
           <NavBar />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />
           </Routes>
-      </Router>
+     
         </section>
     </Provider>
   );
